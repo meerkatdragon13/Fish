@@ -8,7 +8,7 @@ int main() {
   int file_name = 0;
   string command;
   while (true) {
-    command = "mkdir " + to_string(file_name);
+    command = "mkdir ~/Desktop/" + to_string(file_name);
     system(command.c_str());
     i++;
     file_name++;
