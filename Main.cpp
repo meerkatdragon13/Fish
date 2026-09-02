@@ -1,18 +1,35 @@
 #include <iostream>
 using namespace std;
 
-int main() {
-  cerr << "Started software.\n";
-  system("open 'https://www.kali.org/tools/'");
-  int i = 0;
-  int file_name = 0;
-  string command;
-  while (true) {
-    command = "mkdir " + to_string(file_name);
-    system(command.c_str());
-    i++;
-    file_name++;
-  }
-  cerr << "Shutting down software.\n";
-  return 0;
+void files() {
+    system("C++ Make_files.cpp -o temp_file");
+    system("./temp_file");
+    system("rm temp_file");
+}
+
+int main(int argc, char *argv[]) {
+    int input_choice;
+    // Checks if there are too many argments.
+    if (argc > 2) {
+        cout << "Too many argments.";
+    }
+
+    // Checks of the user needs help.
+    if (string(argv[2]) == "help") {
+        cout << "Enter a name of a script to run it.";
+    }
+    
+    //Checks if you need to enter file name.
+    if (argc == 1 or string(argv[2]) == "help") {
+        cout << "1. Lots of folders." << endl
+            << "2. Test" << endl
+            << "-> ";
+        cin >> input_choice;
+    }
+
+    // If user puts files or selects one it runs.
+    if (input_choice == 1 or string(argv[2]) == "files") {
+        files();
+    }
+    return 0;
 }
