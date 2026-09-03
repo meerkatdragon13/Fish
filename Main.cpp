@@ -12,6 +12,7 @@ int main(int argc, char *argv[]) {
     // Checks if there are too many argments.
     if (argc > 2) {
         cout << "Too many argments.";
+        exit();
     }
 
     // Checks of the user needs help.
