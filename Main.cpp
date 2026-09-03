@@ -22,7 +22,6 @@ int main(int argc, char *argv[]) {
     //Checks if you need to enter file name.
     if (argc == 1 or string(argv[2]) == "help") {
         cout << "1. Lots of folders." << endl
-            << "2. Test" << endl
             << "-> ";
         cin >> input_choice;
     }
