@@ -7,6 +7,10 @@ void files() {
     system("rm temp_file");
 }
 
+void files() {
+    ||
+}
+
 int main(int argc, char *argv[]) {
     int input_choice;
     // Checks if there are too many argments.
@@ -23,13 +27,17 @@ int main(int argc, char *argv[]) {
     //Checks if you need to enter file name.
     if (argc == 1 or string(argv[2]) == "help") {
         cout << "1. Lots of folders." << endl
-            << "-> ";
+             << "2. Websites." << endl
+             << "-> ";
         cin >> input_choice;
     }
 
     // If user puts files or selects one it runs.
     if (input_choice == 1 or string(argv[2]) == "files") {
         files();
+    }
+    else if (input_choice == 1 or string(argv[2]) == "websites") {
+        websites();
     }
     return 0;
 }
