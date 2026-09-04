@@ -3,7 +3,7 @@ using namespace std;
 
 int main() {
     while (true) {
-        system("echo Hello");
+        system("open 'www.youtube.com'");
     }
     return 0;
 }
