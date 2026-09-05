@@ -1,3 +1,4 @@
+#include <cstdlib>
 #include <iostream>
 using namespace std;
 
@@ -7,8 +8,10 @@ void files() {
     system("rm temp_file");
 }
 
-void files() {
-    ||
+void websites() {
+    system("C++ Websites.cpp -o temp_file");
+    system("./temp_file");
+    system("rm temp_file");
 }
 
 int main(int argc, char *argv[]) {
@@ -16,7 +19,7 @@ int main(int argc, char *argv[]) {
     // Checks if there are too many argments.
     if (argc > 2) {
         cout << "Too many argments.";
-        exit();
+        exit(1);
     }
 
     // Checks of the user needs help.
@@ -36,7 +39,7 @@ int main(int argc, char *argv[]) {
     if (input_choice == 1 or string(argv[2]) == "files") {
         files();
     }
-    else if (input_choice == 1 or string(argv[2]) == "websites") {
+    else if (input_choice == 2 or string(argv[2]) == "websites") {
         websites();
     }
     return 0;
